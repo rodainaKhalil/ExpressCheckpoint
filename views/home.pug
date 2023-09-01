@@ -1,0 +1,22 @@
+html
+   head
+      title Home Page
+   body
+      include ./partials/head.pug
+      include ./partials/nav.pug
+      h1 Home Page
+      
+      if(user)
+        h3(style='margin-top: 15px') Hi, #{user.name}. This is the website's main page.
+      else
+        a(href = "/sign_up") Sign Up
+
+      div 
+        .homepage 
+        p Welcome to our website.
+        p Here is the content of this page.
+
+
+
+
+      include ./partials/footer.pug
