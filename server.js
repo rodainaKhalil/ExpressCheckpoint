@@ -43,7 +43,10 @@ app.get('/', (req, res) => {
         {title: 'Second Blog', snippet: 'Hello world, this is  the second blog'},
         {title: 'Third Blog', snippet: 'Hello world, this is the third blog'},
     ];
-    res.render('home', { title: 'Home Page', blogs });
+    res.render('home', { 
+        title: 'Home Page', 
+        user: {name: "Rodaina", age: "21"},
+        blogs });
 });
 
 //Contact Us

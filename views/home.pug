@@ -16,6 +16,17 @@ html
         p Welcome to our website.
         p Here is the content of this page.
 
+      div.blogs.content
+  
+        h2 All Blogs
+        
+        - if (blogs.length > 0)
+        each blog in blogs
+            h3.title= blog.title
+            p.snippet= blog.snippet
+        - else
+            p There are no blogs to display...
+
 
 
 
