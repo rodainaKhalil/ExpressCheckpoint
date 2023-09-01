@@ -38,12 +38,9 @@ app.use((req, res, next) => {
 
 //Home Page
 app.get('/', (req, res) => {
-    const blogs = [
-        {title: 'First Blog', snippet: 'Hello world, this is the first blog'},
-        {title: 'Second Blog', snippet: 'Hello world, this is  the second blog'},
-        {title: 'Third Blog', snippet: 'Hello world, this is the third blog'},
-    ];
-    res.render('home', { title: 'Home Page', blogs });
+    res.render('home', { 
+        user: {name: "Rodaina", age: "21"},
+        title: 'Home Page' });
 });
 
 //Contact Us
@@ -53,7 +50,12 @@ app.get('/contact-us', (req, res) => {
 
 //Our Services
 app.get('/services', (req, res) => {
-    res.render('services', { title: 'Our Services'});
+    const services = [
+        {title: 'First Service', snippet: 'Hello, this is the first service we provide'},
+        {title: 'Second Service', snippet: 'Hello, this is the second service we provide'},
+        {title: 'Third Service', snippet: 'Hello, this is the third service we provide'},
+    ];
+    res.render('services', { title: 'Our Services', services});
 });
 
 //404 Page
