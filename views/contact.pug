@@ -4,5 +4,18 @@ html
    body
       include ./partials/head.pug
       include ./partials/nav.pug
-      h3 I'm the main content
+
+      h1(style='margin-botom: 20px') Contact-Us
+      
+      h3(style='margin-bottom: 30px') You can reach us using the methods provided below:
+
+      div.blogs.content
+        h2(style='margin-bottom: 5px') Contact Information
+        - if (blogs.length > 0)
+            each blog in blogs
+                h3.title #{blog.title}
+                p.snippet #{blog.snippet}
+        - else
+            p There is no contact information to display...
+
       include ./partials/footer.pug
